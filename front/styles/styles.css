@@ -20,7 +20,7 @@ li{
     font-size: 1.25em;
 }
 .poster{
-    width: 300px;
+    width: 400px;
     padding: 0.5em 0em;
 }
 #cards{
@@ -36,11 +36,17 @@ li{
 }
 .a{
     font-size: 120%;
-    width: 300px
+    width: 400px
+}
+.a{
+    box-shadow: 5px 5px 10px rgb(229, 229, 229)
 }
 .content{
     padding: 0.3em 0em;
     display: flex;
     flex-wrap: wrap;
 
+}
+h4{
+    font-size: larger;
 }
