@@ -1,0 +1,12 @@
+#container{
+    display: flex;
+    justify-content: space-around;
+}
+.card{
+    background-color: rgb(20, 33, 61);
+    color: azure;
+}
+.titulo{
+    font-size: 200%;
+    color: black;
+}

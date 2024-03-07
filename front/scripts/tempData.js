@@ -1,34 +1,68 @@
-// const tempData = [
-//   {
-//     title: "Guardians of the Galaxy Vol. 2",
-//     year: 2017,
-//     director: "James Gunn",
-//     duration: "2h 16min",
-//     genre: ["Action", "Adventure", "Comedy"],
-//     rate: 7.7,
-//     poster:
-//       "https://m.media-amazon.com/images/M/MV5BNjM0NTc0NzItM2FlYS00YzEwLWE0YmUtNTA2ZWIzODc2OTgxXkEyXkFqcGdeQXVyNTgwNzIyNzg@._V1_SX300.jpg",
-//   },
-//   {
-//     title: "Star Wars: Episode IV - A New Hope",
-//     year: 1977,
-//     director: "George Lucas",
-//     duration: "2h 1min",
-//     genre: ["Action", "Adventure", "Fantasy", "Sci-Fi"],
-//     rate: 8.7,
-//     poster:
-//       "https://m.media-amazon.com/images/M/MV5BOTA5NjhiOTAtZWM0ZC00MWNhLThiMzEtZDFkOTk2OTU1ZDJkXkEyXkFqcGdeQXVyMTA4NDI1NTQx._V1_SX300.jpg",
-//   },
-//   {
-//     title: "The Lord of the Rings: The Fellowship of the Ring",
-//     year: 2001,
-//     director: "Peter Jackson",
-//     duration: "2h 58min",
-//     genre: ["Action", "Adventure", "Drama", "Fantasy"],
-//     rate: 8.8,
-//     poster:
-//       "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SX300.jpg",
-//   },
-// ];
+const colombia = [
+  {
+    title: "La vendedora de rosas",
+    year: 1998,
+    director: "Victor Gaviria",
+    rate: 7.4,
+    poster:
+      "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRVz6hLwmXTclQAt6SCtmCSigMONeP75muqoMwBeWxOvAJZQm_g",
+  },
+  {
+    title: "Rodrigo D. No Futuro",
+    year: 1990,
+    director: "Victor Gaviria",
+    rate: 6.9,
+    poster:
+      "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQ5MkERngqe5RG8AGpeEnjSFzJ_2GVSQQI__OzZfqTzgcruCBSv",
+  },
+  {
+    title: "Los nadie",
+    year: 2016,
+    director: "Juan Sebastian Mesa",
+    rate: 6.7,
+    poster:
+      "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRr3BNahh16dhBgZJeqUFREaiOGBwmbEtOeV_Eh7x7NvwvCGegQ",
+  },
+];
+const container = document.getElementById("container")
 
-//export tempData
+function transformer (movie) {
+    const {title, year, director, rate, poster} = movie
+    const titleElement = document.createElement("h5")
+    const yearElement = document.createElement("h3")
+    const directorElement = document.createElement("h3")
+    const rateElememt = document.createElement("h3")
+    const posterElement = document.createElement("img")
+    const cardElement = document.createElement("div")
+    const cardElement2 = document.createElement("div")
+    const botonElement = document.createElement("button")
+
+    titleElement.innerHTML = title
+    yearElement.innerHTML = "Release date: " + year
+    directorElement.innerHTML = "Director: " + director
+    rateElememt.innerHTML = "Raiting: " + rate
+    posterElement.src = poster
+    botonElement.innerHTML = "Watch now"
+
+    posterElement.classList.add("poster")
+    titleElement.classList.add("titulo")
+    yearElement.classList.add("content")
+    directorElement.classList.add("content")
+    rateElememt.classList.add("content")
+    cardElement.classList.add("card")
+    cardElement2.classList.add("card-body")
+    botonElement.classList.add("btn")
+    botonElement.classList.add("btn-danger")
+
+    cardElement2.appendChild(titleElement)
+    cardElement.appendChild(posterElement)
+    cardElement2.appendChild(yearElement)
+    cardElement2.appendChild(directorElement)
+    cardElement2.appendChild(rateElememt)
+    cardElement2.appendChild(botonElement)
+    cardElement.appendChild(cardElement2)
+    container.appendChild(cardElement)
+
+}
+
+colombia.forEach(movie => transformer(movie))
