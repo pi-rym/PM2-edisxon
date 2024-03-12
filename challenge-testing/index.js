@@ -13,6 +13,10 @@ class CarritoCompra {
         return total;
     }
    aplicarDescuento(porcentaje){
+    const total = this.calcularTotal()
+    
+    const totalFinal = total - (total*(porcentaje/100))
+    return totalFinal
 
    }
     
