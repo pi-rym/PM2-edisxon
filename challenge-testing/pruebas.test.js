@@ -41,7 +41,7 @@ describe("la funcion de agregar productos funciona correctamente", () => {
         carrito1.agregarProducto(producto1)
         carrito1.agregarProducto(producto2)
         carrito1.agregarProducto(producto3)
-        //carrito1.calcularTotal()
+        carrito1.calcularTotal()
         expect(carrito1.aplicarDescuento(20)).toEqual(28000)
         
     })
