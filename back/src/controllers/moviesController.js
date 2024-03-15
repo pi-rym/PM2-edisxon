@@ -1,6 +1,14 @@
+const {moviesFunction} = require("../services/serviceMovies")
 
-const moviesController = (req, res) => {
-    res.status(418).send("Proximamente estaran disponibles los datos de peliculas")
+const moviesController = async (req, res) => {
+    try {
+        const movies = await moviesFunction()
+        res.json(movies)
+    } catch (error) {
+        res.status(418)
+        
+    }
+    
     
 }
 
