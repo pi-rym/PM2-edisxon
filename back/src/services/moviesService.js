@@ -53,5 +53,9 @@ module.exports = {
         // ]
         // return arrayMovies
         
+    },
+    createMovie: async (movie) => {
+        const newMovie = await Movie.create(movie)
+        return newMovie
     }
 }

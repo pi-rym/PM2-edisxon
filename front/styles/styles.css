@@ -21,11 +21,13 @@ li{
 }
 .poster{
     width: 400px;
+    height: 600px;
     padding: 0.5em 0em;
 }
 #cards{
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 
 }
 #subtitulo {
@@ -34,17 +36,21 @@ li{
     padding: 1em 0em;
     font-size: 2.2em;
 }
+
 .a{
+    margin: 1em;
     font-size: 120%;
     width: 400px
 }
 .a{
     box-shadow: 5px 5px 10px rgb(229, 229, 229)
+    
 }
 .content{
     padding: 0.3em 0em;
     display: flex;
     flex-wrap: wrap;
+    
 
 }
 h4{

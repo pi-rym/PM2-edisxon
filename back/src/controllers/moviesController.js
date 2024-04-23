@@ -11,6 +11,17 @@ const moviesController = async (req, res) => {
     
 }
 
+const newMovie = async (req, res) => {
+    try {
+        const newOne = await moviesService.createMovie(req.body)
+        res.status(201).json(newOne)
+        
+    } catch (error) {
+        res.status(500).send("ha ocurrido un error")
+    }
+}
+
 module.exports = {
     moviesController,
+    newMovie
 }

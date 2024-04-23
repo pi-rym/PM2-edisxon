@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "live-server",
+    "start": "live-server --browser=chrome",
     "build": "webpack"
   },
   "keywords": [],
