@@ -7,6 +7,15 @@ clearButton.addEventListener("click", function(){
     formulario.reset()
 })
 
+const rateInput = document.getElementById('rate');
+const rateValueOutput = document.getElementById('rateValue');
+
+rateInput.addEventListener('input', function() {
+    rateValueOutput.textContent = rateInput.value;
+});
+
+
+
 formulario.addEventListener("submit", function(){
     event.preventDefault()
 
